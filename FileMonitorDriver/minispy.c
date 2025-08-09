@@ -117,6 +117,8 @@ Status of the operation.
 	UNICODE_STRING uniString;
 	NTSTATUS status = STATUS_SUCCESS;
 
+	UNREFERENCED_PARAMETER(RegistryPath);
+
 	// DbgPrint("FileMonitor: DriverEntry inici\n");
 
 	try {

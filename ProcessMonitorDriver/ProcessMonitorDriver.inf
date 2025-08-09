@@ -15,19 +15,19 @@ PnpLockdown=1
 DefaultDestDir = 1		; %SystemRoot%\system32\drivers
 Driver.DriverFiles = 1
 
-[DefaultInstall]
-CopyFiles = ProcessMonitorDriver.sys
+[DefaultInstall.amd64]
+CopyFiles = Driver.DriverFiles
 
-;[Driver.DriverFiles]
-;PMDriver.sys
+[Driver.DriverFiles]
+ProcessMonitorDriver.sys
 
 [SourceDisksNames]
 1 = %DiskName%
 
 [SourceDisksFiles]
-PMDriver.sys = 1
+ProcessMonitorDriver.sys = 1
 
-[DefaultInstall.Services]
+[DefaultInstall.amd64.Services]
 AddService = %ServiceName%,,Driver.Service
 
 [Driver.Service]
