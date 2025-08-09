@@ -173,7 +173,9 @@
     <ClCompile Include="hash.c" />
     <ClCompile Include="https.c" />
     <ClCompile Include="log.c" />
-    <ClCompile Include="main.c" />
+    <ClCompile Include="main.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="network.c" />
     <ClCompile Include="Param.c" />
     <ClCompile Include="ProcessMonitor.c" />
@@ -190,6 +192,7 @@
     <ClInclude Include="network.h" />
     <ClInclude Include="param.h" />
     <ClInclude Include="ProcessMonitor.h" />
+    <ClInclude Include="stdafx.h" />
     <ClInclude Include="TMultiThreadSingleQueue.h" />
     <ClInclude Include="usb.h" />
     <ClInclude Include="uthash.h" />

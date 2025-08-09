@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include <stdio.h>
 #include <sddl.h>
 
@@ -60,7 +61,7 @@ void LoadProcessMonitorDriver(void) {
 	}
 
 	serviceHandle = OpenServiceA(scmHandle, PROCESS_MONITOR_NAME, SC_MANAGER_ALL_ACCESS);
-	if (serviceHandle)	// Ja està creat
+	if (serviceHandle)	// Ja estï¿½ creat
 	{
 		ret = StartService(serviceHandle, 0, NULL);
 		if (ret == 0)  {
@@ -303,7 +304,7 @@ void ImageEvent(ProcessInfo *ie) {
 	memset(&CreationTime, 0, sizeof(CreationTime));
 	memset(&LastWriteTime, 0, sizeof(LastWriteTime));
 
-	if (p) {  // Aquest hash està a la taula de hashos
+	if (p) {  // Aquest hash estï¿½ a la taula de hashos
 
 		//printf("%s hash=<%s> p->time=%lli Tick=%lli p->time+OFFSET=%lli\n", ProcessName, hash, p->time, GetTickCount64(), p->time + LOG_IMAGE_TIMEOUT_MS);
 
@@ -331,7 +332,7 @@ void ImageEvent(ProcessInfo *ie) {
 			Logs(str);
 		}
 	}
-	else {	// Aquest hash NO està a la taula de hashos
+	else {	// Aquest hash NO estï¿½ a la taula de hashos
 
 		//printf("calc_hash ImageEvent NEW Path=<%s>\n", Path);
 

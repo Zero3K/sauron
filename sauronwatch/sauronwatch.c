@@ -1,10 +1,11 @@
+#include "stdafx.h"
 #include <windows.h>
 #include <conio.h>
 #include <winhttp.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Param.h"
+#include "param.h"
 #include "https.h"
 #include "hash.h"
 
@@ -146,7 +147,7 @@ int main(int argc, char *argv[])
 	  exit(1);
 	}
 
-	/* Bucle infinit: comprova cada segon que el servei Sauron estigui en execució */
+	/* Bucle infinit: comprova cada segon que el servei Sauron estigui en execuciï¿½ */
 
 	while (1) {
 
@@ -157,13 +158,13 @@ int main(int argc, char *argv[])
 		  continue;
 	    }
 
-		/* Si el servei Sauron està en execució, esperem 1 segon i repetim la comprovació */
+		/* Si el servei Sauron estï¿½ en execuciï¿½, esperem 1 segon i repetim la comprovaciï¿½ */
 		if (ServiceStatus.dwCurrentState == SERVICE_RUNNING) {
 		  Sleep(1000); // 1000 ms
 		  continue;
 		}
 
-		/* Si el servei no està en execució, l'aturem */
+		/* Si el servei no estï¿½ en execuciï¿½, l'aturem */
 		ControlService(schService, SERVICE_CONTROL_STOP, &ServiceStatus);
 		 
 		/* Bucle infinit fins que el servei estigui aturat */
@@ -224,7 +225,7 @@ int main(int argc, char *argv[])
 
 		// Si el proces Sauron s'esta executant, fer Sleep(1000) i continue
 
-		// Baixar-se el fitxer /sauron/files/ (conté la llista de fitxers)
+		// Baixar-se el fitxer /sauron/files/ (contï¿½ la llista de fitxers)
 
 		//wprintf(L"log_server_address=<%s>\n", log_server_address);
 		//wprintf(L"log_server_method=<%s>\n", log_server_method);
@@ -240,7 +241,7 @@ int main(int argc, char *argv[])
 			//for (i = 0; (i < strlen(buffer)); i++) printf("%i ", buffer[i]);
 			//printf("\n");
 
-			// Recórrer la llista de fitxers, per cadascun mirar si el tenim
+			// Recï¿½rrer la llista de fitxers, per cadascun mirar si el tenim
 
 			n = 0;
 			for (i = 0; (i < (int)len);) {

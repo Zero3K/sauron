@@ -1,12 +1,13 @@
 //#define _WIN32_WINNT_WIN7                   0x0601
 
+#include "stdafx.h"
 #include <windows.h>
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
 #include <aclapi.h>
 
-#include "Param.h"
+#include "param.h"
 #include "https.h"
 #include "log.h"
 #include "network.h"
@@ -293,7 +294,7 @@ void Logs(char *data) {		// N=NetworkMonitor, F=FileMonitor, P=ProcessMonitor
 
   GetAgentId();
 
-  // Si el log "current té més de max_transactions, el renombrem a "YYYMMDD..." i creem un nou "current"
+  // Si el log "current tï¿½ mï¿½s de max_transactions, el renombrem a "YYYMMDD..." i creem un nou "current"
   CheckCurrentLogSize();
 
   if (GetParameter("ID_AGENT", 0) == NULL) return;

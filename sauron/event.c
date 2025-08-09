@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include <windows.h>
 #include <stdio.h>
 #include <tchar.h>
@@ -469,7 +470,7 @@ void LoadHashes(void) {
 		fclose(fp);
 	}
 
-	// Carregar els hashos en memòria
+	// Carregar els hashos en memï¿½ria
 
 	if (GetParameter("WHITE_PATH", 0) == NULL) return;
 

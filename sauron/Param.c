@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,7 +14,7 @@
 #define CONFIG_REFRESH_DEFAULT "600"
 
 #include "log.h"
-#include "Param.h"
+#include "param.h"
 
 typedef struct {
 	char name[32];
