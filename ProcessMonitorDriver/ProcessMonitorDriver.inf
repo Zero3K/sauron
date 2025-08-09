@@ -9,6 +9,7 @@ ClassGuid={b86dff51-a31e-4bac-b3cf-e8cfe75c9fc2}
 Provider=socjordi
 DriverVer = 19/01/2015,1.0.0.0
 CatalogFile=%DriverName%.cat
+PnpLockdown=1
 
 [DestinationDirs]
 DefaultDestDir = 1		; %SystemRoot%\system32\drivers
@@ -29,18 +30,13 @@ PMDriver.sys = 1
 [DefaultInstall.Services]
 AddService = %ServiceName%,,Driver.Service
 
-;[Driver.Service]
-;DisplayName      = %ServiceName%
-;Description      = %ServiceDescription%
-;ServiceBinary    = %12%\%FileName%
-;ServiceType      = 1                            ;SERVICE_KERNEL_DRIVER
-;StartType        = 3                            ;SERVICE_DEMAND_START
-;ErrorControl     = 1                            ;SERVICE_ERROR_NORMAL
-
-[Manufacturer]
-ManufacturerName=Standard,NT$ARCH$
-
-[Standard.NT$ARCH$]
+[Driver.Service]
+DisplayName      = %ServiceName%
+Description      = %ServiceDescription%
+ServiceBinary    = %12%\%FileName%
+ServiceType      = 1                            ;SERVICE_KERNEL_DRIVER
+StartType        = 3                            ;SERVICE_DEMAND_START
+ErrorControl     = 1                            ;SERVICE_ERROR_NORMAL
 
 [Strings]
 FileName="ProcessMonitorDriver.sys"
