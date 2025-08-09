@@ -5,6 +5,8 @@
 
 #pragma once
 
+// Prevent windows.h from including winsock.h to avoid conflicts with winsock2.h from pcap
+#define _WINSOCKAPI_
 #include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>

@@ -187,7 +187,7 @@ NTSTATUS Unsupported(PDEVICE_OBJECT, PIRP) { return STATUS_NOT_SUPPORTED; }
 /*	Main entry point into the driver, is called when the driver is loaded */
 NTSTATUS DriverEntry(
 	IN PDRIVER_OBJECT DriverObject,
-	IN PUNICODE_STRING
+	IN PUNICODE_STRING RegistryPath
 )
 {
 	NTSTATUS        ntStatus;
@@ -196,6 +196,8 @@ NTSTATUS DriverEntry(
 	UNICODE_STRING  uszProcessEventString;
 	PDEVICE_OBJECT    pDeviceObject;
 	PCAPTURE_PROCESS_MANAGER pProcessManager;
+
+	UNREFERENCED_PARAMETER(RegistryPath);
 
 	/* Point uszDriverString at the driver name */
 	RtlInitUnicodeString(&uszDriverString, DEVICE_NAME);
