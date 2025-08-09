@@ -1,8 +1,9 @@
+#include "stdafx.h"
 #include <windows.h>
 #include <stdio.h>
 
 #include "network.h"
-#include "Param.h"
+#include "param.h"
 #include "https.h"
 #include "wmi.h"
 #include "event.h"

@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include <stdio.h>
 #include <windows.h>
 #include <psapi.h>		// GetProcessImageFileName
@@ -54,7 +55,7 @@ void LoadFileMonitorDriver(void) {
 	serviceHandle = OpenServiceA(scmHandle, FILE_MONITOR_NAME,
 		SERVICE_START | SERVICE_STOP |
 		SERVICE_QUERY_STATUS | SERVICE_ENUMERATE_DEPENDENTS);
-	if (serviceHandle)	// Ja està creat
+	if (serviceHandle)	// Ja estï¿½ creat
 	{
 		LogError("LoadFileMonitorDriver OpenService true");
 

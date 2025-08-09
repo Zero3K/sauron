@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include <stdio.h>
 #include <pcap.h>
 #include <Ws2tcpip.h>
@@ -113,14 +114,14 @@ void ListIPFlow() {
 /**********************************************************************************/
 /*
 
-Es manté una llista Protocol/IPOrigen/IPDesti/PortOrigen/PortDesti/NumBytes
+Es mantï¿½ una llista Protocol/IPOrigen/IPDesti/PortOrigen/PortDesti/NumBytes
 Aquesta llista es va buidant al log cada minut
 
 OPCIONAL
 
-Es manté una llista blanca IP/PORT, es guarda al servidor /var/www/sauron/1/a1/config/NetworkMonitor.conf
+Es mantï¿½ una llista blanca IP/PORT, es guarda al servidor /var/www/sauron/1/a1/config/NetworkMonitor.conf
 
-Si fa match IP origen/port origen o IP destí/port destí, no fer log
+Si fa match IP origen/port origen o IP destï¿½/port destï¿½, no fer log
 Els ports poden ser *
 
 En iniciar el servei i cada cert temps, es comprova si el del servidor coincideix amb el local (es comparen hashos), es fa manar el del servidor
@@ -488,7 +489,7 @@ void InstallWinpcapDriver(void) {
 	}
 
 	serviceHandle = OpenServiceA(scmHandle, "NPF", SC_MANAGER_ALL_ACCESS);
-	if (serviceHandle) {	// Ja està creat
+	if (serviceHandle) {	// Ja estï¿½ creat
 
 		// Reiniciar
 
